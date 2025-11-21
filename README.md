@@ -50,6 +50,8 @@ The project imports the following packages (used in the codebase). Install the l
 - langchain_chroma
 - langchain_community
 - langchain_core
+- python-multipart
+- pypdf
 
 ## Ollama (local LLM & embeddings)
 
@@ -84,7 +86,7 @@ python -m venv .venv
 
 # install example dependencies (replace with pinned deps in requirements.txt)
 pip install --upgrade pip
-pip install fastapi uvicorn werkzeug langchain_ollama langchain_chroma langchain_community langchain_core
+pip install fastapi uvicorn werkzeug langchain_ollama langchain_chroma langchain_community langchain_core python-multipart pypdf
 ```
 
 ## How to run (development)
@@ -94,17 +96,17 @@ Start the FastAPI app with Uvicorn (from the repository root):
 ```powershell
 # from project root
 .\.venv\Scripts\Activate.ps1 ;
-uvicorn app:app --reload --host 0.0.0.0 --port 8000
+uvicorn app:app --reload--port 8000
 ```
 
-The API will be available at http://127.0.0.1:8000 and interactive docs at http://127.0.0.1:8000/docs
+The API will be available at http://localhost:8080/ and interactive docs at http://localhost:8080/docs
 
 ## Using Swagger / Interactive API docs
 
 FastAPI provides interactive OpenAPI documentation out of the box. Once the app is running you can use these UIs to explore and test endpoints:
 
 - Swagger UI (interactive, allows trying requests):
-	- URL: http://127.0.0.1:8000/docs
+	- URL: http://localhost:8080/docs
 
 From the Swagger UI you can select any endpoint, expand it to see the request schema, provide parameters or files, and execute the request directly from your browser. This is very handy for manual testing during development.
 
