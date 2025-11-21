@@ -14,7 +14,7 @@ It provides endpoints to:
 - Vector DB: Chroma (persisted to local `chroma/` directory)
 - Embeddings & LLM adapters: Ollama-based adapters (via `langchain_ollama` / `langchain_chroma`)
 
-## Project structure (selected)
+## Project structure
 
 - `app.py` - FastAPI application and route definitions (entrypoint)
 - `dependencies.py` - dependency providers for FastAPI (factories and adapters)
@@ -50,8 +50,6 @@ The project imports the following packages (used in the codebase). Install the l
 - langchain_chroma
 - langchain_community
 - langchain_core
-
-Note: This README does not pin exact versions. If you maintain this project, add a `requirements.txt` or `pyproject.toml` with pinned versions to ensure reproducible installs.
 
 ## Ollama (local LLM & embeddings)
 
